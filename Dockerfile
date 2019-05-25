@@ -28,6 +28,7 @@ RUN sed -ri 's/(main)$/\1 contrib non-free/g' /etc/apt/sources.list \
 	    \
 	    graphviz\
 	    python3\
+	&& pip install Pygments
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
