@@ -21,6 +21,7 @@ RUN sed -ri 's/(main)$/\1 contrib non-free/g' /etc/apt/sources.list \
 		texlive-extra-utils \
 		texlive-font-utils \
 		texlive-fonts-recommended \
+		texlive-fonts-extra \
 		texlive-latex-base \
 		texlive-latex-extra \
 		texlive-pictures \
