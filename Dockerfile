@@ -15,7 +15,6 @@ RUN sed -ri 's/(main)$/\1 contrib non-free/g' /etc/apt/sources.list \
 		texlive-lang-cyrillic \
 		xfonts-scalable \
 		ttf-mscorefonts-installer \
-		scalable-cyrfonts-tex \
 		\
 		texlive-base \
 		texlive-extra-utils \
@@ -28,8 +27,8 @@ RUN sed -ri 's/(main)$/\1 contrib non-free/g' /etc/apt/sources.list \
 		texlive-science \
 	    \
 	    graphviz\
-	    python3\
-	&& pip install Pygments\
+	    python3 python3-pip\
+	&& python3 -m pip install Pygments\
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
